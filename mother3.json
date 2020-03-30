@@ -1,4 +1,4 @@
-﻿{
+{
   "Version": "en_v12",
   "References": {
     "Data.Psi": [
@@ -177,6 +177,40 @@
       552180,
       29946764
     ],
+    "Disclaimer.Graphics": [
+      1207704,
+      1295884
+    ],
+    "Disclaimer.Palette": [
+      1207792,
+      1295972
+    ],
+    "GBAPlayer.Palette": [
+      372676
+    ],
+    "GBAPlayer.Graphics": [
+      372660
+    ],
+    "GBAPlayer.Arrangement": [
+      372668
+    ],
+    "Health": [
+      370204
+    ],
+    "Title": [
+      356416,
+      356480,
+      356580,
+      356816,
+      356936,
+      356996,
+      357092,
+      357184,
+      357244
+    ],
+    "Title.Frames": [
+      358698
+    ],
     "Battle.Bank": [
       380808,
       427940
@@ -203,6 +237,10 @@
     "Maps": [
       "[0xD2E1D8, 0x111DEB3]"
     ],
+    "Title": [
+      "[0x1BCDD8C, 0x1C5FCCB]",
+      "[0x1C8DE98, 0x1C8F36B]"
+    ],
     "Nullspace": [
       "[0x1F86008, 0x1F8611F]",
       "[0x1F879E8, 0x1F8C3FF]",
@@ -213,267 +251,556 @@
       "[0x1FC26F0, 0x1FDFFFF]"
     ]
   },
-  "Parameters": {
-    "Data.Psi.Count": 256,
-    "Data.Items.Count": 256,
-    "Data.Enemies.Count": 256,
-    "Maps.Info.Count": 1000,
-    "Maps.GraphicsInfo.Count": 1000
-  },
+  "ScriptEncodingParameters": null,
+  "ControlCodes": [
+    {
+      "Code": -1,
+      "Arguments": 0,
+      "Description": "End of text",
+      "Tag": "END",
+      "Flags": 1
+    },
+    {
+      "Code": -255,
+      "Arguments": 0,
+      "Description": "Line break",
+      "Tag": "BREAK"
+    },
+    {
+      "Code": -254,
+      "Arguments": 0,
+      "Description": "End menu selection",
+      "Tag": "ENDMENU"
+    },
+    {
+      "Code": -253,
+      "Arguments": 1,
+      "Description": "Wait for player input; XXXX is always 0xFF00",
+      "Tag": "WAIT"
+    },
+    {
+      "Code": -252,
+      "Arguments": 1,
+      "Description": "Wait for XXXX frames",
+      "Tag": "DELAY"
+    },
+    {
+      "Code": -251,
+      "Arguments": 1,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -250,
+      "Arguments": 1,
+      "Description": "Begin menu selection with XXXX choices",
+      "Tag": "MENU"
+    },
+    {
+      "Code": -249,
+      "Arguments": 0,
+      "Description": "Event",
+      "Tag": "EVENT"
+    },
+    {
+      "Code": -248,
+      "Arguments": 1,
+      "Description": "Play sound XXXX",
+      "Tag": "SOUND"
+    },
+    {
+      "Code": -247,
+      "Arguments": 0,
+      "Description": "Center text horizontally and vertically",
+      "Tag": "CENTERHV"
+    },
+    {
+      "Code": -246,
+      "Arguments": 0,
+      "Description": "Center text horizontally",
+      "Tag": "CENTERH"
+    },
+    {
+      "Code": -245,
+      "Arguments": 0,
+      "Description": "Alternate between regular and Mr. Saturn fonts",
+      "Tag": "ALTFONT",
+      "Flags": 2
+    },
+    {
+      "Code": -244,
+      "Arguments": 1,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -240,
+      "Arguments": 0,
+      "Description": "Battle text variable"
+    },
+    {
+      "Code": -239,
+      "Arguments": 0,
+      "Description": "Battle text variable"
+    },
+    {
+      "Code": -238,
+      "Arguments": 0,
+      "Description": "Battle text variable"
+    },
+    {
+      "Code": -237,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -236,
+      "Arguments": 0,
+      "Description": "Battle text variable"
+    },
+    {
+      "Code": -235,
+      "Arguments": 0,
+      "Description": "Battle text variable"
+    },
+    {
+      "Code": -234,
+      "Arguments": 0,
+      "Description": "Battle text variable"
+    },
+    {
+      "Code": -231,
+      "Arguments": 0,
+      "Description": "Battle text variable"
+    },
+    {
+      "Code": -224,
+      "Arguments": 0,
+      "Description": "Battle text variable"
+    },
+    {
+      "Code": -223,
+      "Arguments": 1,
+      "Description": "Display name of item XXXX",
+      "Tag": "ITEM"
+    },
+    {
+      "Code": -222,
+      "Arguments": 1,
+      "Description": "Display name of character XXXX",
+      "Tag": "NAME22"
+    },
+    {
+      "Code": -221,
+      "Arguments": 1,
+      "Description": "Display name of character XXXX",
+      "Tag": "NAME23"
+    },
+    {
+      "Code": -220,
+      "Arguments": 1,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -219,
+      "Arguments": 1,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -218,
+      "Arguments": 2,
+      "Description": "Display character name XXXX followed by YYYY dashes",
+      "Tag": "NAMEDASH"
+    },
+    {
+      "Code": -208,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -207,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -206,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -205,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -204,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -203,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -202,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -201,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -190,
+      "Arguments": 1,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -188,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -187,
+      "Arguments": 0,
+      "Description": "Favorite food",
+      "Tag": "FOOD"
+    },
+    {
+      "Code": -186,
+      "Arguments": 0,
+      "Description": "Favorite thing",
+      "Tag": "THING"
+    },
+    {
+      "Code": -185,
+      "Arguments": 0,
+      "Description": "Player name (sanctuary)",
+      "Tag": "SANCNAME"
+    },
+    {
+      "Code": -184,
+      "Arguments": 0,
+      "Description": "Player name (factory)",
+      "Tag": "FACTNAME"
+    },
+    {
+      "Code": -128,
+      "Arguments": 1,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -127,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -126,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -125,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -124,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -96,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -95,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -94,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -93,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -32,
+      "Arguments": 0,
+      "Description": "Unknown"
+    },
+    {
+      "Code": -31,
+      "Arguments": 1,
+      "Description": "Display status icon XXXX",
+      "Tag": "ICON"
+    },
+    {
+      "Code": -257,
+      "Arguments": 1,
+      "Description": "Custom code: hot spring",
+      "Tag": "HOTSPRING"
+    }
+  ],
   "CharLookup": {
     "0": "",
     "1": {
       "String": "!",
-      "Context": "Normal"
+      "Context": 1
     },
     "2": {
       "String": "\"",
-      "Context": "Normal"
+      "Context": 1
     },
     "3": {
       "String": "#",
-      "Context": "Normal"
+      "Context": 1
     },
     "4": {
       "String": "$",
-      "Context": "Normal"
+      "Context": 1
     },
     "5": {
       "String": "%",
-      "Context": "Normal"
+      "Context": 1
     },
     "6": {
       "String": "&",
-      "Context": "Normal"
+      "Context": 1
     },
     "7": {
       "String": "'",
-      "Context": "Normal"
+      "Context": 1
     },
     "8": {
       "String": "(",
-      "Context": "Normal"
+      "Context": 1
     },
     "9": {
       "String": ")",
-      "Context": "Normal"
+      "Context": 1
     },
     "10": {
       "String": "*",
-      "Context": "Normal"
+      "Context": 1
     },
     "11": {
       "String": "+",
-      "Context": "Normal"
+      "Context": 1
     },
     "12": {
       "String": ",",
-      "Context": "Normal"
+      "Context": 1
     },
     "13": {
       "String": "-",
-      "Context": "Normal"
+      "Context": 1
     },
     "14": {
       "String": ".",
-      "Context": "Normal"
+      "Context": 1
     },
     "15": {
       "String": "/",
-      "Context": "Normal"
+      "Context": 1
     },
     "16": {
       "String": "0",
-      "Context": "Normal"
+      "Context": 1
     },
     "17": {
       "String": "1",
-      "Context": "Normal"
+      "Context": 1
     },
     "18": {
       "String": "2",
-      "Context": "Normal"
+      "Context": 1
     },
     "19": {
       "String": "3",
-      "Context": "Normal"
+      "Context": 1
     },
     "20": {
       "String": "4",
-      "Context": "Normal"
+      "Context": 1
     },
     "21": {
       "String": "5",
-      "Context": "Normal"
+      "Context": 1
     },
     "22": {
       "String": "6",
-      "Context": "Normal"
+      "Context": 1
     },
     "23": {
       "String": "7",
-      "Context": "Normal"
+      "Context": 1
     },
     "24": {
       "String": "8",
-      "Context": "Normal"
+      "Context": 1
     },
     "25": {
       "String": "9",
-      "Context": "Normal"
+      "Context": 1
     },
     "26": {
       "String": ":",
-      "Context": "Normal"
+      "Context": 1
     },
     "27": {
       "String": ";",
-      "Context": "Normal"
+      "Context": 1
     },
     "28": {
       "String": "<",
-      "Context": "Normal"
+      "Context": 1
     },
     "29": {
       "String": "=",
-      "Context": "Normal"
+      "Context": 1
     },
     "30": {
       "String": ">",
-      "Context": "Normal"
+      "Context": 1
     },
     "31": {
       "String": "?",
-      "Context": "Normal"
+      "Context": 1
     },
     "32": {
       "String": "@",
-      "Context": "Normal"
+      "Context": 1
     },
     "33": {
       "String": "A",
-      "Context": "Normal"
+      "Context": 1
     },
     "34": {
       "String": "B",
-      "Context": "Normal"
+      "Context": 1
     },
     "35": {
       "String": "C",
-      "Context": "Normal"
+      "Context": 1
     },
     "36": {
       "String": "D",
-      "Context": "Normal"
+      "Context": 1
     },
     "37": {
       "String": "E",
-      "Context": "Normal"
+      "Context": 1
     },
     "38": {
       "String": "F",
-      "Context": "Normal"
+      "Context": 1
     },
     "39": {
       "String": "G",
-      "Context": "Normal"
+      "Context": 1
     },
     "40": {
       "String": "H",
-      "Context": "Normal"
+      "Context": 1
     },
     "41": {
       "String": "I",
-      "Context": "Normal"
+      "Context": 1
     },
     "42": {
       "String": "J",
-      "Context": "Normal"
+      "Context": 1
     },
     "43": {
       "String": "K",
-      "Context": "Normal"
+      "Context": 1
     },
     "44": {
       "String": "L",
-      "Context": "Normal"
+      "Context": 1
     },
     "45": {
       "String": "M",
-      "Context": "Normal"
+      "Context": 1
     },
     "46": {
       "String": "N",
-      "Context": "Normal"
+      "Context": 1
     },
     "47": {
       "String": "O",
-      "Context": "Normal"
+      "Context": 1
     },
     "48": {
       "String": "P",
-      "Context": "Normal"
+      "Context": 1
     },
     "49": {
       "String": "Q",
-      "Context": "Normal"
+      "Context": 1
     },
     "50": {
       "String": "R",
-      "Context": "Normal"
+      "Context": 1
     },
     "51": {
       "String": "S",
-      "Context": "Normal"
+      "Context": 1
     },
     "52": {
       "String": "T",
-      "Context": "Normal"
+      "Context": 1
     },
     "53": {
       "String": "U",
-      "Context": "Normal"
+      "Context": 1
     },
     "54": {
       "String": "V",
-      "Context": "Normal"
+      "Context": 1
     },
     "55": {
       "String": "W",
-      "Context": "Normal"
+      "Context": 1
     },
     "56": {
       "String": "X",
-      "Context": "Normal"
+      "Context": 1
     },
     "57": {
       "String": "Y",
-      "Context": "Normal"
+      "Context": 1
     },
     "58": {
       "String": "Z",
-      "Context": "Normal"
+      "Context": 1
     },
     "59": {
       "String": "[ALPHA]",
-      "Context": "Normal"
+      "Context": 1
     },
     "60": {
       "String": "[BETA]",
-      "Context": "Normal"
+      "Context": 1
     },
     "61": {
       "String": "[GAMMA]",
-      "Context": "Normal"
+      "Context": 1
     },
     "62": {
       "String": "[OMEGA]",
-      "Context": "Normal"
+      "Context": 1
     },
     "63": "[LARGECIRCLE]",
     "64": {
       "String": " ",
-      "Context": "Normal"
+      "Context": 1
     },
     "65": "a",
     "66": "b",
@@ -508,11 +835,11 @@
     "95": "ß",
     "96": {
       "String": "¡",
-      "Context": "Normal"
+      "Context": 1
     },
     "97": {
       "String": "¿",
-      "Context": "Normal"
+      "Context": 1
     },
     "98": "À",
     "99": "Á",
@@ -576,283 +903,283 @@
     "157": "ÿ",
     "158": {
       "String": " ",
-      "Context": "Saturn"
+      "Context": 2
     },
     "159": {
       "String": "@",
-      "Context": "Saturn"
+      "Context": 2
     },
     "160": {
       "String": "!",
-      "Context": "Saturn"
+      "Context": 2
     },
     "161": {
       "String": "\"",
-      "Context": "Saturn"
+      "Context": 2
     },
     "162": {
       "String": "#",
-      "Context": "Saturn"
+      "Context": 2
     },
     "163": {
       "String": "$",
-      "Context": "Saturn"
+      "Context": 2
     },
     "164": {
       "String": "%",
-      "Context": "Saturn"
+      "Context": 2
     },
     "165": {
       "String": "&",
-      "Context": "Saturn"
+      "Context": 2
     },
     "166": {
       "String": "'",
-      "Context": "Saturn"
+      "Context": 2
     },
     "167": {
       "String": "(",
-      "Context": "Saturn"
+      "Context": 2
     },
     "168": {
       "String": ")",
-      "Context": "Saturn"
+      "Context": 2
     },
     "169": {
       "String": "*",
-      "Context": "Saturn"
+      "Context": 2
     },
     "170": {
       "String": "+",
-      "Context": "Saturn"
+      "Context": 2
     },
     "171": {
       "String": ",",
-      "Context": "Saturn"
+      "Context": 2
     },
     "172": {
       "String": "-",
-      "Context": "Saturn"
+      "Context": 2
     },
     "173": {
       "String": ".",
-      "Context": "Saturn"
+      "Context": 2
     },
     "174": {
       "String": "/",
-      "Context": "Saturn"
+      "Context": 2
     },
     "175": {
       "String": "?",
-      "Context": "Saturn"
+      "Context": 2
     },
     "176": {
       "String": "0",
-      "Context": "Saturn"
+      "Context": 2
     },
     "177": {
       "String": "1",
-      "Context": "Saturn"
+      "Context": 2
     },
     "178": {
       "String": "2",
-      "Context": "Saturn"
+      "Context": 2
     },
     "179": {
       "String": "3",
-      "Context": "Saturn"
+      "Context": 2
     },
     "180": {
       "String": "4",
-      "Context": "Saturn"
+      "Context": 2
     },
     "181": {
       "String": "5",
-      "Context": "Saturn"
+      "Context": 2
     },
     "182": {
       "String": "6",
-      "Context": "Saturn"
+      "Context": 2
     },
     "183": {
       "String": "7",
-      "Context": "Saturn"
+      "Context": 2
     },
     "184": {
       "String": "8",
-      "Context": "Saturn"
+      "Context": 2
     },
     "185": {
       "String": "9",
-      "Context": "Saturn"
+      "Context": 2
     },
     "186": {
       "String": ":",
-      "Context": "Saturn"
+      "Context": 2
     },
     "187": {
       "String": ";",
-      "Context": "Saturn"
+      "Context": 2
     },
     "188": {
       "String": "<",
-      "Context": "Saturn"
+      "Context": 2
     },
     "189": {
       "String": "=",
-      "Context": "Saturn"
+      "Context": 2
     },
     "190": {
       "String": ">",
-      "Context": "Saturn"
+      "Context": 2
     },
     "191": {
       "String": "¡",
-      "Context": "Saturn"
+      "Context": 2
     },
     "192": {
       "String": "¿",
-      "Context": "Saturn"
+      "Context": 2
     },
     "193": {
       "String": "A",
-      "Context": "Saturn"
+      "Context": 2
     },
     "194": {
       "String": "B",
-      "Context": "Saturn"
+      "Context": 2
     },
     "195": {
       "String": "C",
-      "Context": "Saturn"
+      "Context": 2
     },
     "196": {
       "String": "D",
-      "Context": "Saturn"
+      "Context": 2
     },
     "197": {
       "String": "E",
-      "Context": "Saturn"
+      "Context": 2
     },
     "198": {
       "String": "F",
-      "Context": "Saturn"
+      "Context": 2
     },
     "199": {
       "String": "G",
-      "Context": "Saturn"
+      "Context": 2
     },
     "200": {
       "String": "H",
-      "Context": "Saturn"
+      "Context": 2
     },
     "201": {
       "String": "I",
-      "Context": "Saturn"
+      "Context": 2
     },
     "202": {
       "String": "J",
-      "Context": "Saturn"
+      "Context": 2
     },
     "203": {
       "String": "K",
-      "Context": "Saturn"
+      "Context": 2
     },
     "204": {
       "String": "L",
-      "Context": "Saturn"
+      "Context": 2
     },
     "205": {
       "String": "M",
-      "Context": "Saturn"
+      "Context": 2
     },
     "206": {
       "String": "N",
-      "Context": "Saturn"
+      "Context": 2
     },
     "207": {
       "String": "O",
-      "Context": "Saturn"
+      "Context": 2
     },
     "208": {
       "String": "P",
-      "Context": "Saturn"
+      "Context": 2
     },
     "209": {
       "String": "Q",
-      "Context": "Saturn"
+      "Context": 2
     },
     "210": {
       "String": "R",
-      "Context": "Saturn"
+      "Context": 2
     },
     "211": {
       "String": "S",
-      "Context": "Saturn"
+      "Context": 2
     },
     "212": {
       "String": "T",
-      "Context": "Saturn"
+      "Context": 2
     },
     "213": {
       "String": "U",
-      "Context": "Saturn"
+      "Context": 2
     },
     "214": {
       "String": "V",
-      "Context": "Saturn"
+      "Context": 2
     },
     "215": {
       "String": "W",
-      "Context": "Saturn"
+      "Context": 2
     },
     "216": {
       "String": "X",
-      "Context": "Saturn"
+      "Context": 2
     },
     "217": {
       "String": "Y",
-      "Context": "Saturn"
+      "Context": 2
     },
     "218": {
       "String": "Z",
-      "Context": "Saturn"
+      "Context": 2
     },
     "219": {
       "String": "[ALPHA]",
-      "Context": "Saturn"
+      "Context": 2
     },
     "220": {
       "String": "[BETA]",
-      "Context": "Saturn"
+      "Context": 2
     },
     "221": {
       "String": "[GAMMA]",
-      "Context": "Saturn"
+      "Context": 2
     },
     "222": {
       "String": "[OMEGA]",
-      "Context": "Saturn"
+      "Context": 2
     },
     "223": {
       "String": "ß",
-      "Context": "Saturn"
+      "Context": 2
     },
     "224": {
       "String": "Ç",
-      "Context": "Saturn"
+      "Context": 2
     },
     "225": {
       "String": "Æ",
-      "Context": "Saturn"
+      "Context": 2
     },
     "226": {
       "String": "Œ",
-      "Context": "Saturn"
+      "Context": 2
     },
     "227": {
       "String": "Ø",
-      "Context": "Saturn"
+      "Context": 2
     },
     "228": "[RIGHT]",
     "229": "[LEFT]",
@@ -864,318 +1191,33 @@
     "235": "[NOWIDTH]",
     "236": "[HEART]"
   },
-  "ControlCodes": [
-    {
-      "Code": -1,
-      "Description": "End of text",
-      "Arguments": 0,
-      "Tag": "END",
-      "Flags": "Terminate"
-    },
-    {
-      "Code": -255,
-      "Description": "Line break",
-      "Tag": "BREAK",
-      "Arguments": 0
-    },
-    {
-      "Code": -254,
-      "Description": "End menu selection",
-      "Tag": "ENDMENU",
-      "Arguments": 0
-    },
-    {
-      "Code": -253,
-      "Description": "Wait for player input; XXXX is always 0xFF00",
-      "Tag": "WAIT",
-      "Arguments": 1
-    },
-    {
-      "Code": -252,
-      "Description": "Wait for XXXX frames",
-      "Tag": "DELAY",
-      "Arguments": 1
-    },
-    {
-      "Code": -251,
-      "Description": "Unknown",
-      "Arguments": 1
-    },
-    {
-      "Code": -250,
-      "Description": "Begin menu selection with XXXX choices",
-      "Tag": "MENU",
-      "Arguments": 1
-    },
-    {
-      "Code": -249,
-      "Description": "Event",
-      "Tag": "EVENT",
-      "Arguments": 0
-    },
-    {
-      "Code": -248,
-      "Description": "Play sound XXXX",
-      "Tag": "SOUND",
-      "Arguments": 1
-    },
-    {
-      "Code": -247,
-      "Description": "Center text horizontally and vertically",
-      "Tag": "CENTERHV",
-      "Arguments": 0
-    },
-    {
-      "Code": -246,
-      "Description": "Center text horizontally",
-      "Tag": "CENTERH",
-      "Arguments": 0
-    },
-    {
-      "Code": -245,
-      "Description": "Alternate between regular and Mr. Saturn fonts",
-      "Tag": "ALTFONT",
-      "Arguments": 0,
-      "Flags": "AlternateFont"
-    },
-    {
-      "Code": -244,
-      "Description": "Unknown",
-      "Arguments": 1
-    },
-    {
-      "Code": -240,
-      "Description": "Battle text variable",
-      "Arguments": 0
-    },
-    {
-      "Code": -239,
-      "Description": "Battle text variable",
-      "Arguments": 0
-    },
-    {
-      "Code": -238,
-      "Description": "Battle text variable",
-      "Arguments": 0
-    },
-    {
-      "Code": -237,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -236,
-      "Description": "Battle text variable",
-      "Arguments": 0
-    },
-    {
-      "Code": -235,
-      "Description": "Battle text variable",
-      "Arguments": 0
-    },
-    {
-      "Code": -234,
-      "Description": "Battle text variable",
-      "Arguments": 0
-    },
-    {
-      "Code": -231,
-      "Description": "Battle text variable",
-      "Arguments": 0
-    },
-    {
-      "Code": -224,
-      "Description": "Battle text variable",
-      "Arguments": 0
-    },
-    {
-      "Code": -223,
-      "Description": "Display name of item XXXX",
-      "Tag": "ITEM",
-      "Arguments": 1
-    },
-    {
-      "Code": -222,
-      "Description": "Display name of character XXXX",
-      "Tag": "NAME22",
-      "Arguments": 1
-    },
-    {
-      "Code": -221,
-      "Description": "Display name of character XXXX",
-      "Tag": "NAME23",
-      "Arguments": 1
-    },
-    {
-      "Code": -220,
-      "Description": "Unknown",
-      "Arguments": 1
-    },
-    {
-      "Code": -219,
-      "Description": "Unknown",
-      "Arguments": 1
-    },
-    {
-      "Code": -218,
-      "Description": "Display character name XXXX followed by YYYY dashes",
-      "Tag": "NAMEDASH",
-      "Arguments": 2
-    },
-    {
-      "Code": -208,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -207,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -206,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -205,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -204,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -203,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -202,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -201,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -190,
-      "Description": "Unknown",
-      "Arguments": 1
-    },
-    {
-      "Code": -188,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -187,
-      "Description": "Favorite food",
-      "Tag": "FOOD",
-      "Arguments": 0
-    },
-    {
-      "Code": -186,
-      "Description": "Favorite thing",
-      "Tag": "THING",
-      "Arguments": 0
-    },
-    {
-      "Code": -185,
-      "Description": "Player name (sanctuary)",
-      "Tag": "SANCNAME",
-      "Arguments": 0
-    },
-    {
-      "Code": -184,
-      "Description": "Player name (factory)",
-      "Tag": "FACTNAME",
-      "Arguments": 0
-    },
-    {
-      "Code": -128,
-      "Description": "Unknown",
-      "Arguments": 1
-    },
-    {
-      "Code": -127,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -126,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -125,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -124,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -96,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -95,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -94,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -93,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -32,
-      "Description": "Unknown",
-      "Arguments": 0
-    },
-    {
-      "Code": -31,
-      "Description": "Display status icon XXXX",
-      "Tag": "ICON",
-      "Arguments": 1
-    },
-    {
-      "Code": -257,
-      "Description": "Custom code: hot spring",
-      "Tag": "HOTSPRING",
-      "Arguments": 1
-    }
-  ],
+  "SaturnLookup": null,
+  "Parameters": {
+    "Data.Psi.Count": 256,
+    "Data.Items.Count": 256,
+    "Data.Enemies.Count": 256,
+    "Maps.Info.Count": 1000,
+    "Maps.GraphicsInfo.Count": 1000
+  },
   "Patches": [
     {
-      "Description": "Translation bugfixes",
       "Chunks": [
         {
           "Position": 13622272,
-          "Data": [ 6, 0 ]
+          "Data": [6, 0]
         },
         {
           "Position": 13664060,
-          "Data": [ 255, 255 ]
+          "Data": [255, 255]
         },
         {
           "Position": 30408098,
-          "Data": [ 73 ]
+          "Data": [73]
         }
-      ]
+      ],
+      "Description": "Translation bugfixes",
+      "Count": 3,
+      "IsReadOnly": false
     }
   ]
 }
