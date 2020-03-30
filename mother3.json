@@ -163,6 +163,32 @@
       552180,
       29946764
     ],
+    "GBAPlayer.Palette": [
+      372676
+    ],
+    "GBAPlayer.Graphics": [
+      372660
+    ],
+    "GBAPlayer.Arrangement": [
+      372668
+    ],
+    "Health": [
+      370204
+    ],
+    "Title": [
+      356416,
+      356480,
+      356580,
+      356816,
+      356936,
+      356996,
+      357092,
+      357184,
+      357244
+    ],
+    "Title.Frames": [
+      358698
+    ],
     "Battle.Bank": [
       380808,
       427940
@@ -184,6 +210,10 @@
     ],
     "Maps": [
       "[0xD2E1D8, 0x111DEB3]"
+    ],
+    "Title": [
+      "[0x1BCDD8C, 0x1C5FCCB]",
+      "[0x1C8DE98, 0x1C8F36B]"
     ],
     "Nullspace": [
       "[0x1F86008, 0x1FDFFFF]"
